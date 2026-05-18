@@ -6,10 +6,13 @@ import React from 'react'
   { 이름 : 'susan', 국어 : 93, 영어 : 93, 수학 : 83, 과학 : 93},
   { 이름 : 'sue', 국어 : 94, 영어 : 94, 수학 : 84, 과학 : 94},
 ]*/
+console.log("ScoresTable")
 
-function scoresTable({scores}) {
+function ScoresTable({scores}) {
   return (
+    
      <table>
+
       <tr>
         {
           Object.keys(scores[0]).map(key=>(
@@ -22,15 +25,17 @@ function scoresTable({scores}) {
           <tr>
             {
               Object.values(abx).map(
-                value => (<td>{value}</td>)
+                (value) => (<td>{value}</td>)
               )
             }
           </tr>
           )
         )
       }
+
     </table>
+    
   )
 }
 
-export default scoresTable
+export default ScoresTable
